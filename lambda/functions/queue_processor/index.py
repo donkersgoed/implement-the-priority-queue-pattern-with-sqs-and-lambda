@@ -32,6 +32,7 @@ def event_handler(event, _context):
 
 
 def _process_record(record):
+    """Handle the record or raise an error when higher priority messages are available."""
     is_priority_msg = record["eventSourceARN"] == PRIORITY_QUEUE_ARN
     if not is_priority_msg:
         _check_priority_messages_available()

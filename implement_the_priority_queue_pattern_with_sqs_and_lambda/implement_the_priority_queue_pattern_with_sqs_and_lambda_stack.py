@@ -19,6 +19,9 @@ from implement_the_priority_queue_pattern_with_sqs_and_lambda.multiple_priority_
 from implement_the_priority_queue_pattern_with_sqs_and_lambda.multiple_priority_fifo_queues import (
     MultiplePriorityFifoQueues,
 )
+from implement_the_priority_queue_pattern_with_sqs_and_lambda.fifo_priority_queue_concurrency_three import (
+    FifoPriorityQueueConcurrencyThree,
+)
 
 
 class ImplementThePriorityQueuePatternWithSqsAndLambdaStack(Stack):
@@ -33,4 +36,7 @@ class ImplementThePriorityQueuePatternWithSqsAndLambdaStack(Stack):
         MultiplePriorityQueues(scope=self, construct_id="MultiplePriorityQueues")
         MultiplePriorityFifoQueues(
             scope=self, construct_id="MultiplePriorityFifoQueues"
+        )
+        FifoPriorityQueueConcurrencyThree(
+            scope=self, construct_id="FifoPriorityQueueConcurrencyThree"
         )
